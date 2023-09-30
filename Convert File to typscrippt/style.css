@@ -1,0 +1,9 @@
+h1 {
+	color: orange;
+}
+
+.input-area {
+	border: 1px solid black;
+	background-color: lightgray;
+	padding: 20px;
+}
