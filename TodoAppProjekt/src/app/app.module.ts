@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TodoErfassenComponent } from './todo-erfassen/todo-erfassen.component';
+import { TodoListeAnzeigenComponent } from './todo-liste-anzeigen/todo-liste-anzeigen.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoErfassenComponent,
+    TodoListeAnzeigenComponent
   ],
   imports: [
     BrowserModule,
