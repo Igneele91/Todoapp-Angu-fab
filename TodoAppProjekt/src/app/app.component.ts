@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TodoAppProjekt';
+  todosListe: string[] = [];
+
+  addToTodos(neuesTodo: string) {
+    this.todosListe.push(neuesTodo);
+  }
 }

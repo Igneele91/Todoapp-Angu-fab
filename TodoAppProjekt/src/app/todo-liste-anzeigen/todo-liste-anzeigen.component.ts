@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-todo-liste-anzeigen',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./todo-liste-anzeigen.component.css']
 })
 export class TodoListeAnzeigenComponent {
-
+  @Input() todos: string[] = [];
 }

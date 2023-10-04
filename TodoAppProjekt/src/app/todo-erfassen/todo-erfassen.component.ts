@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-todo-erfassen',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./todo-erfassen.component.css']
 })
 export class TodoErfassenComponent {
+  neuesTodo: string = '';
+  @Output() neuesTodoEvent = new EventEmitter<string>();
 
+  addTodo() {
+    if(this.neuesTodo.trim() !== '') {
+      this.neuesTodoEvent.emit(this.neuesTodo.trim());
+      this.neuesTodo = '';
+    }
+  }
 }
+
