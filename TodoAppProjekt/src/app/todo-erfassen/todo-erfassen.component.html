@@ -1,2 +1,7 @@
-<input [(ngModel)]="neuesTodo" placeholder="Neues TODO eingeben">
-<button (click)="addTodo()">Hinzufügen</button>
+<form (submit)="addTodo(); $event.preventDefault()">
+  <label for="name">Name: </label>
+  <input [(ngModel)]="name" id="name" type="text"><br>
+  <label for="todo">Todo: </label>
+  <input [(ngModel)]="todo" id="todo" type="text"><br><br>
+  <button type="submit">Submit</button><br>
+</form>
