@@ -6,18 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  todosListe: {name: string, todo: string}[] = [];
+  todos: {name: string, todo: string}[] = [];
 
-  addToTodos(neuesTodo: {name: string, todo: string}) {
-    this.todosListe.push(neuesTodo);
+  addTodo(newTodo: {name: string, todo: string}) {
+    this.todos.push(newTodo);
   }
 
-  deleteFromTodos(todoToDelete: {name: string, todo: string}) {
-    const index = this.todosListe.findIndex(
-      todo => todo.name === todoToDelete.name && todo.todo === todoToDelete.todo
-    );
-    if (index > -1) {
-      this.todosListe.splice(index, 1);
-    }
+  deleteTodo(index: number) {
+    this.todos.splice(index, 1);
   }
 }

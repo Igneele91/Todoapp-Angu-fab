@@ -1,2 +1,5 @@
-<app-todo-erfassen (neuesTodoEvent)="addToTodos($event)"></app-todo-erfassen>
-<app-todo-liste-anzeigen [todos]="todosListe" (deleteTodoEvent)="deleteFromTodos($event)"></app-todo-liste-anzeigen>
+<h1>TODO Liste</h1>
+<p>Dies ist eine TODO Liste. Trage Name und Tätigkeit ein.</p>
+<app-todo-erfassen (neuesTodoEvent)="addTodo($event)"></app-todo-erfassen>
+<h1>Erfasste TODOs</h1>
+<app-todo-liste-anzeigen [todos]="todos" (deleteTodoEvent)="deleteTodo($event)"></app-todo-liste-anzeigen>
